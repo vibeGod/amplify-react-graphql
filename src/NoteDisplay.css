@@ -1,0 +1,20 @@
+
+
+
+.NoteForm, .NoteList {
+    background-color: white;
+    border-radius: 25px;
+    margin: 20px;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.NoteBox {
+    margin: 100px;
+}
+
+.SignOut {
+    margin: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
