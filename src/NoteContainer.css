@@ -1,0 +1,14 @@
+
+
+.note-container {
+    border-radius: 25px;
+    transition: background-color 0.3s ease; /* Add a transition for smooth hover effect */
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+.note-container:hover {
+
+    background-color:lightblue;
+}

@@ -1,6 +1,9 @@
+import  './NoteContainer.css';
+
 import {
     Button,
   } from "@aws-amplify/ui-react";
+
 
 
 
@@ -9,7 +12,7 @@ export default function NoteContainer(props) {
    
     return (
 
-<div style={{display: 'flex'}}>
+<div className="note-container" style={{display: 'flex'}}>
 <p style={{margin: '10px'}}>
   {props.note.name}
 </p>
