@@ -9,6 +9,8 @@ import {
     withAuthenticator,
   } from "@aws-amplify/ui-react";
 
+  import NoteContainer from './NoteContainer.js';
+
 
 import { listNotes } from "./graphql/queries";
 import { uploadData, downloadData } from 'aws-amplify/storage';
@@ -29,7 +31,6 @@ import './NoteDisplay.css';
 
 import { generateClient } from 'aws-amplify/api';
 const client = generateClient();
-
 
 
 
@@ -132,38 +133,18 @@ export default function NoteDisplay() {
         </View>
       </View>
 
-<View className="NoteList">
+<div className="NoteList">
    
-      <View margin="3rem 0">
+      <div margin="3rem 0">
       {notes.map((note) => (
-      
+        <div>
 
-  <View
-    ClassName="NoteBox"
-    key={note.id || note.name}
-    direction="row"
-    justifyContent="left"
-    alignItems="left"
-    >
-    <Text as="strong" fontWeight={700}>
-      {note.name}
-    </Text>
-    <Text as="span">{note.description}</Text>
-    {note.image && (
-      <Image
-        src={note.image}
-        alt={`visual aid for ${notes.name}`}
-        style={{ width: 400 }}
-      />
-    )}
-    <Button variation="link" onClick={() => deleteNote(note)}>
-      Delete note
-    </Button>
-  </View>
+ <NoteContainer note={note}/>
+ </div>
 ))}
 
-  </View>
-      </View>
+  </div>
+      </div>
       
       </View>
     );

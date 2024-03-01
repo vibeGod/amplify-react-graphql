@@ -2,13 +2,6 @@ import React from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import {
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Text,
-  TextField,
-  View,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
 
@@ -31,12 +24,12 @@ const App = ({ signOut }) => {
 
   
   return (
-    <View className="App">
+    <div className="App">
       <Header />
       <NoteDisplay />
-      <Button className='SignOut' onClick={signOut}>Sign Out</Button>
+      <button className='SignOut' onClick={signOut}>Sign Out</button>
     
-    </View>
+    </div>
     
   );
 };
